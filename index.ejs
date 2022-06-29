@@ -1,0 +1,61 @@
+<html>
+<head>
+ <meta charset='UTF-8'>
+ <title>방명록</title>
+ <style>
+        *{
+                background-color : #FBFBEF;
+                margin:auto;
+                margin-top:20px;
+        }
+        h1{
+                color: #5CD1E5;
+        }
+        table{
+                font-size:20px;
+                border-color: #5CD1E5;
+                background-color: #5CD1E5;
+                width:40%;
+                border-radius: 5px;
+        }
+        .in input{
+                width:40%;
+                border;pink;
+                font-size:20px;
+        }
+        span input{
+
+                height:10%;
+                font-size:20px;
+        }
+        button{
+                height:40px;
+                width:100px;
+                font-size:20px;
+                background-color:white;
+        }
+
+ </style>
+</head>
+<body>
+        <h1 align="center">방명록<br>WELCOME!</h1>
+        <form method="POST"><div align="center">
+        <div class="in"><input type="text" name="Name" placeholder="작성자"><br><span><input type="text" name="Story" placeholder="방명록을 작성해주세요"/></span><div>
+        <button type="submit"/>작성</button>
+        <table border="1">
+          <tr text-align="center">
+                <th> 작성자</th>
+                <th> 작성날짜</th>
+        </tr>
+        <% for(var i of list){%>
+        <tr>
+                <td align="center"><%= i.Name %></td>
+                <td align="center"><%= i.Upload %></td></tr>
+        <p><tr height="50">
+                <td colspan="2" style="background-color:#E6FFFF"><%= i.Story %></td>
+        </tr><p>
+        <%}%>
+        </table>
+
+</body>
+</html>
